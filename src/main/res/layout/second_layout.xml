@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="标题"
+        android:inputType="textPersonName" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="日期"
+                android:inputType="date" />
+
+            <Button
+                android:id="@+id/selectDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择日期" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow>
+            <EditText
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="时间"
+                android:inputType="time" />
+            <Button
+                android:id="@+id/selectTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="选择时间" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.33"
+        android:ems="10"
+        android:hint="事件"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:maxLines="10"
+        android:minLines="3" />
+
+
+    <TableLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+        <TableRow>
+            <RatingBar
+                android:id="@+id/importance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:numStars="3"
+                android:stepSize="1" />
+
+            <TextView
+                android:id="@+id/showImportance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#000050"
+                android:textSize="24sp" />
+            />
+        </TableRow>
+    </TableLayout>
+
+
+
+    <TextView
+        android:id="@+id/editTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="创建/修改日期：" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="添加" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="删除"
+        android:textColor="#D02020" />
+</LinearLayout>
